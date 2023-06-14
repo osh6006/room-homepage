@@ -1,0 +1,80 @@
+/* colors */
+$dark-gray: hsl(0, 0%, 63%);
+$black: hsl(0, 0%, 0%);
+$white: hsl(0, 0%, 100%);
+$very-dark-gray: hsl(0, 0%, 27%);
+
+/* font-size */
+$main-font-size: 12px;
+
+/* font-weight */
+$main-font-medium: 500;
+$main-font-semibold: 600;
+$main-font-bold: 700;
+
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.all {
+  max-width: 1440px;
+  background: red;
+}
+
+.top {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .top-left {
+    width: 840px;
+    height: 534px;
+    background-image: url("./images/desktop-image-hero-1.jpg");
+
+    nav {
+      display: flex;
+      margin-left: 64px;
+      margin-top: 63px;
+      font-size: 1rem;
+      max-width: 362px;
+      font-weight: $main-font-bold;
+      color: $white;
+
+      ul {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+
+        li {
+          cursor: pointer;
+
+          &::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 2px;
+            background: $white;
+            transition: width 0.4s ease-in;
+            margin: 10px auto;
+          }
+
+          &:hover::after {
+            width: 100%;
+          }
+        }
+      }
+
+      .logo {
+        margin-right: 30px;
+      }
+    }
+  }
+
+  .top-right {
+    width: 600px;
+    height: 534px;
+    background-color: $white;
+  }
+}
